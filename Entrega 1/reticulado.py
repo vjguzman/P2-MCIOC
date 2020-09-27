@@ -27,7 +27,7 @@ class Reticulado(object):
 		return
 		
 	def agregar_barra(self, barra):
-		"""Implementar"""
+		self.barras.append(barra)
 		return
 
 	def obtener_coordenada_nodal(self, n): 
@@ -46,8 +46,15 @@ class Reticulado(object):
 		return peso_total
 
 	def obtener_barras(self):
-		"""Implementar"""
-		return 
+		numero_barra = []
+		nodos_barra = []
+		for i in range(len(self.barras)):
+			nod = []
+			numero_barra.append(i)
+			nod.append(self.barras[i].ni)
+			nod.append(self.barras[i].nj)
+			nodos_barra.append(nod)
+		return numero_barra,nodos_barra
 
 	def agregar_restriccion(self, nodo, gdl, valor=0.0):
 		"""Implementar"""
@@ -72,7 +79,10 @@ class Reticulado(object):
 	def __str__(self):
 		s = "Hola soy un reticulado!\n"
 		s += "nodos:\n"
-		s += f"{self.xyz}\n"
+		for i in range(len(self.xyz)):
+			s+=f'{i} : ({self.obtener_coordenada_nodal(i)})\n'
+		nbarra,nodos = self.obtener_barras()
 		s += "barras:\n"
-		s += f'{self.obtener_coordenada_nodal(1)}'
+		for i in range(len(self.barras)):
+			s+=f'{nbarra[i]} : {nodos[i]}\n'
 		return s

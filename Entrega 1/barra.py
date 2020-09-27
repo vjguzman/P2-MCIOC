@@ -8,7 +8,7 @@ Created on Sat Sep 26 12:58:03 2020
 import numpy as np
 
 g = 9.81 #kg*m/s^2
-
+phi = 3.14
 
 class Barra(object):
 
@@ -53,4 +53,5 @@ class Barra(object):
 		"""Implementar"""
 		a = self.calcular_area()
 		largo = self.calcular_largo(reticulado)
-		return 
+		peso = a*largo*self.ρ
+		return peso
