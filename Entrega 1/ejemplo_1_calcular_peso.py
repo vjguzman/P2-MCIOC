@@ -23,9 +23,9 @@ ret = Reticulado()
 
 
 #Nodos
-ret.agregar_nodo(0,0)
-ret.agregar_nodo(1,0)
-ret.agregar_nodo(1,1)
+ret.agregar_nodo(0,0,0)
+ret.agregar_nodo(1,0,0)
+ret.agregar_nodo(1,1,1)
 
 
 #Barras
@@ -39,8 +39,8 @@ ret.agregar_barra(b3)
 
 peso_total = ret.calcular_peso_total()
 
-print(f"peso_total = {peso_total}")
+print(ret)
+
+print(f"peso_total = {peso_total} kg")
 
 ver_reticulado_2d(ret)
-
-print(ret)

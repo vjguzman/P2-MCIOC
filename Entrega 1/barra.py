@@ -45,6 +45,7 @@ class Barra(object):
 		z = abs(n_i[2]-n_j[2])
 
 		L = (x**2 + y**2)**(0.5)
+		return L
 
 	def calcular_peso(self, reticulado):
 		"""Devuelve el largo de la barra. 
