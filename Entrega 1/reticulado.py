@@ -2,7 +2,7 @@
 """
 Created on Sat Sep 26 13:00:50 2020
 
-@author: 56955
+@author: vjguzman
 """
 
 import numpy as np
@@ -36,25 +36,15 @@ class Reticulado(object):
 
 	def calcular_peso_total(self):
 		"""Implementar"""
-		peso_total = 0
-		for barra in lista_barras:
-			peso_total += barra.calcular_peso(self)
-		return peso_total
+		return 
 
 	def obtener_nodos(self):
 		xy = self.xyz
 		return xy
 
 	def obtener_barras(self):
-		numero_barra = []
-		nodos_barra = []
-		for i in range(len(self.barras)):
-			nod = []
-			numero_barra.append(i)
-			nod.append(self.barras[i].ni)
-			nod.append(self.barras[i].nj)
-			nodos_barra.append(nod)
-		return numero_barra,nodos_barra
+		"""Implementar"""
+		return 
 
 	def agregar_restriccion(self, nodo, gdl, valor=0.0):
 		"""Implementar"""

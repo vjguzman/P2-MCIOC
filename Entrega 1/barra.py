@@ -28,10 +28,7 @@ class Barra(object):
 		return 
 
 	def calcular_area(self):
-		''' Falta ver unidades de medida'''
-		r = self.R - self.t
-		area = phi*((self.R**2)-(r**2))
-		return area
+		return 
 
 	def calcular_largo(self, reticulado):
 		"""Devuelve el largo de la barra. 
@@ -39,10 +36,6 @@ class Barra(object):
 		xj : Arreglo numpy de dimenson (3,) con coordenadas del nodo j
 		"""
 		"""saco las coordenadas (x,y,z) de los nodos"""
-		n_i = reticulado.obtener_coordenada_nodal(self.ni)
-		n_j = reticulado.obtener_coordenada_nodal(self.nj)
-
-
 		return 
 
 	def calcular_peso(self, reticulado):
@@ -51,7 +44,4 @@ class Barra(object):
 		xj : Arreglo numpy de dimenson (3,) con coordenadas del nodo j
 		"""
 		"""Implementar"""
-		a = self.calcular_area()
-		largo = self.calcular_largo(reticulado)
-		peso = a*largo*self.ρ
-		return peso
+		return 
