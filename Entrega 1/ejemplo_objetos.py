@@ -37,11 +37,11 @@ class Persona(object):
 		print(f"{quien} dice: Hola {otro}.")
 
 
-profe = Persona("profe")
+profe = Persona("profesor")
 alumno = Persona("alumno")
 
-profe = Persona("Albus")
-alumno  = Persona("Harry")
+profe = Persona("jose")
+alumno  = Persona("Vero")
 
 
 
