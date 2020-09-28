@@ -25,7 +25,7 @@ class Barra(object):
 
 	def obtener_conectividad(self):
 		"""Implementar"""
-		return 
+		return [self.ni,self.nj]
 
 	def calcular_area(self):
 		return 

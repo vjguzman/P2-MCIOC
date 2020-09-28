@@ -44,7 +44,7 @@ class Reticulado(object):
 
 	def obtener_barras(self):
 		"""Implementar"""
-		return 
+		return self.barras
 
 	def agregar_restriccion(self, nodo, gdl, valor=0.0):
 		"""Implementar"""
