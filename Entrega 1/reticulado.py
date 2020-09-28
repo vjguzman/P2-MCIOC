@@ -36,14 +36,14 @@ class Reticulado(object):
 
 	def calcular_peso_total(self):
 		"""Implementar"""
-		return 
-
-	def obtener_nodos(self):
-		"""Implementar"""
 		peso_total = 0
 		for barra in lista_barras:
 			peso_total += barra.calcular_peso(self)
 		return peso_total
+
+	def obtener_nodos(self):
+		xy = self.xyz
+		return xy
 
 	def obtener_barras(self):
 		numero_barra = []
@@ -81,8 +81,7 @@ class Reticulado(object):
 		s += "nodos:\n"
 		for i in range(len(self.xyz)):
 			s+=f'{i} : ({self.obtener_coordenada_nodal(i)})\n'
-		nbarra,nodos = self.obtener_barras()
 		s += "barras:\n"
 		for i in range(len(self.barras)):
-			s+=f'{nbarra[i]} : {nodos[i]}\n'
+			s+=f'{i} : {self.barras[i].ni,self.barras[i].nj}\n'
 		return s
