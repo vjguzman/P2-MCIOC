@@ -52,8 +52,7 @@ class Reticulado(object):
 
 
 	def __str__(self):
-		s = "Hola soy un reticulado!\n"
-		s += "nodos:\n"
+		s = "nodos:\n"
 		for i in range(len(self.xyz)):
 			s+=f'{i} : ({self.obtener_coordenada_nodal(i)})\n'
 		s += "barras:\n"
