@@ -47,9 +47,8 @@ ret.agregar_restriccion(2, 1, 0)
 
 ret.agregar_fuerza(4, 1, -100*KN)
 
-#ret.ensamblar_sistema()
-#ret.resolver_sistema()
-#ret.recuperar_fuerzas()
+ret.ensamblar_sistema()
+ret.resolver_sistema()
+ret.recuperar_fuerzas()
 
 print(ret)
-#ver_reticulado_2d(ret)
