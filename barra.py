@@ -58,3 +58,18 @@ class Barra(object):
 
         peso = (a*largo)*self.ρ*g
         return peso 
+
+    def obtener_rigidez(self, reticulado):
+        L = self.calcular_largo(reticulado)
+        A = self.calcular_area()
+        k = (self.E * A)/ L
+
+        ''' definir theta'''
+        ke = (theta.T @ thehta)*k
+        return
+
+    def obtener_vector_de_cargas(self, reticulado):
+        w = self.calcular_peso(reticulado)
+
+        ''' sacar fe '''
+        return
