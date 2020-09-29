@@ -52,4 +52,4 @@ ret.agregar_fuerza(4, 1, -100*KN)
 #ret.recuperar_fuerzas()
 
 print(ret)
-ver_reticulado_2d(ret)
+#ver_reticulado_2d(ret)

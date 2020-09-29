@@ -63,67 +63,15 @@ class Reticulado(object):
         else:
             self.cargas[nodo].append([gdl,valor])
         return
-
     def ensamblar_sistema(self):
-        #metodo de rigidez directa
-        Ndimensiones = 2
-        Ngdl = self.Nnodos + Ndimensiones
-        #iterar sobre las barras:
-        self.K = np.zeros((Ngdl,Ngdl), dtype = np.double)
-        self.f = np.zeros((Ngdl), dtype = np.double)
-        self.u = np.zeros((Ngdl), dtype = np.double)
-        for b in self.barras:
-            ke = b.obtener_rigidez(self)
-            fe = b.obtener_vector_de_cargas(self)
 
-        #terminar
-            K[p,q] = ke[i,j]
         return
-
     def resolver_sistema(self):
 
-        #0: Aplicar restricciones
-
-        #Definir vectores
-        #gdl_libres = [...lista de numeros de GDL libre]
-        #gdl_restringidos = [...lista de numeros de GDL restringidos]
-
-        #Prellenar el vector u
-        for nodo in self.restricciones:
-            restriccion = self.restricciones[nodo]
-            gdl = restriccion[0]
-            valor = restriccion[1]
-
-            #gdl ----> gdl_restringidos
-            #valor ----> u
-
-        # con gdl_restringidos encuentro gdl_libres
-
-        #Particionar
-        Kff = K[np.ix_(gdl_libres,gdl_libres)]
-        Kfc = K[np.ix_(gdl_libres,gdl_restringidos)]
-        Kcf = Kfc.T
-        Kcc = K[np.ix_(gdl_restringidos,gdl_restringidos)]
-
-        uf = u[gdl_libres]
-        uc = u[gdl_restringidos]
-
-        ff = f[gdl_libres]
-        fc = f[gdl_restringidos]
-
-        #Solucionar Kff uf = ff
-        uf = solve(Kff, ff-(Kfc*uc))
-
-        self.Rc = Kcf@uf + Kcc@uc - fc
-
         return
-
     def recuperar_fuerzas(self):
 
-        fuerzas = zeros((len(self.barras)), dtype = np.double)
-        #for b in self.barras:
-
-        return fuerzas
+        return
 
     def __str__(self):
         s = "nodos:\n"
